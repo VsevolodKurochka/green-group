@@ -1,0 +1,32 @@
+/*!
+Theme Name: greengroup
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Custom theme for Greengroup
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: greengroup
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+@import "abstracts/abstracts";
+@import "generic/normalize";
+@import "generic/box-sizing";
+@import "base/base";
+
+@import "layouts/nav";
+@import "components/skew-icon";
+@import "components/elementor-widget-heading";
+@import "pages/home/greeting";
+@import "pages/home/services";
+@import "pages/home/insurances";
+@import "pages/home/testimonial";
+@import "pages/home/contact-us";
+@import "pages/home/who-we-are";
+@import "pages/home/copyright";
+
+@import "components/section-border-top";
+@import "slick";

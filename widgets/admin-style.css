@@ -1,0 +1,80 @@
+
+.skew-icon-widget {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.skew-icon-widget:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background-color: #0073ae;
+    transform: skew(2deg);
+}
+
+.skew-icon-widget--border:before {
+    border-width: 1px;
+    border-color: #0073ae;
+    border-style: solid;
+    background-color: #e7eeff;
+}
+
+.skew-icon-widget__image {
+    width: 96px;
+}
+
+.skew-icon-widget__inner {
+    position: relative;
+    z-index: 1;
+    padding: 30px 15px;
+}
+
+.skew-icon-widget__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+    height: 190px;
+    border-width: 1px;
+    border-color: #0073ae;
+    border-style: solid;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.skew-icon-widget__title {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skew-icon-widget__content {
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .skew-icon-widget__header {
+        margin-bottom: 75px;
+    }
+    .skew-icon-widget__title {
+        font-size: 30px;
+        max-width: 80%;
+    }
+    .skew-icon-widget__inner {
+        padding-bottom: 75px;
+    }
+}
+
+.home-greeting.elementor-section .elementor-background-overlay {
+    height: 80%;
+    background: linear-gradient(-180deg, #000, transparent);
+}

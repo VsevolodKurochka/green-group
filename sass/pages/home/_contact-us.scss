@@ -1,0 +1,47 @@
+.contact-us {
+  &__location,
+  &__phone {
+    position: relative;
+    padding-left: 50px;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  &__location {
+    &:before {
+      background: url('./img/location.svg') 0 0 no-repeat;
+      background-size: cover;
+      width: 32px;
+      height: 48px;
+    }
+
+    strong {
+      font-size: 120%;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  &__phone {
+    &:before {
+      background: url('./img/phone.svg') 0 0 no-repeat;
+      background-size: cover;
+      width: 38px;
+      height: 38px;
+    }
+    p {
+      margin: 0;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: all ease 0.3s;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

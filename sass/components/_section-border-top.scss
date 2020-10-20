@@ -1,0 +1,22 @@
+.section-border-top {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 5px;
+    background-color: #ceddff;
+    height: 15px;
+    width: 85%;
+    transform: rotate(2.9deg);
+    z-index: 1;
+  }
+  &--dark:before {
+    background-color: #0073ae;
+  }
+  @include breakpoint(sm) {
+    &:before {
+      top: 32px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.home-copyright {
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: all ease 0.3s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.elementor-widget-heading  {
+  .elementor-size-medium {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -5px;
+      width: 150px;
+      height: 1px;
+      transform: translateX(-50%);
+      background-color: #0073ae;
+    }
+  }
+  
+  &--left .elementor-size-medium:before{
+    left: 0;
+    transform: none;
+    background-color: #fff;
+  }
+}
