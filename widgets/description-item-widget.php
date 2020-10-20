@@ -8,14 +8,14 @@ use Elementor\Controls_Manager;
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 
-class SkewIconWidget extends Widget_Base{
+class DescriptionItemWidget extends Widget_Base{
 
     public function get_name(){
-        return 'skew-icon-widget';
+        return 'description-item-widget';
     }
 
     public function get_title(){
-        return 'Skew icon widget';
+        return 'Description item widget';
     }
 
     public function get_icon(){
@@ -36,20 +36,18 @@ class SkewIconWidget extends Widget_Base{
         );
 
         $this->add_control(
-            'border_style',
+            'image',
             [
-                'label' => __( 'Background type', 'greengroup' ),
-                'type' => \Elementor\Controls_Manager::SELECT,
-                'default' => 'default',
-                'options' => [
-                    'border'  => __( 'Border', 'plugin-domain' ),
-                    'default' => __( 'Color fluid', 'plugin-domain' ),
+                'label' => 'Image Heading',
+                'type' => \Elementor\Controls_Manager::MEDIA,
+                'default' => [
+                    'url' => \Elementor\Utils::get_placeholder_image_src(),
                 ],
             ]
         );
 
         $this->add_control(
-            'image',
+            'icon',
             [
                 'label' => 'Icon Heading',
                 'type' => \Elementor\Controls_Manager::MEDIA,
@@ -84,17 +82,23 @@ class SkewIconWidget extends Widget_Base{
     protected function render(){
         $settings = $this->get_settings_for_display();
         ?>
-        <div class="skew-icon-widget skew-icon-widget--<?php echo $settings['border_style']?>">
-            <div class="skew-icon-widget__inner">
-                <div class="skew-icon-widget__header">
+        <div class="description-item">
+            <div class="description-item__header">
+                <img
+                    src="<?php echo $settings['image']['url'] ?>"
+                    alt="<?php echo $settings['label_heading']?>"
+                    class="description-item__image">
+            </div>
+            <div class="description-item__body">
+                <div class="description-item__inner">
                     <img
-                        src="<?php echo $settings['image']['url'] ?>"
+                        src="<?php echo $settings['icon']['url'] ?>"
                         alt="<?php echo $settings['label_heading']?>"
-                        class="skew-icon-widget__image">
-                </div>
-                <p class="skew-icon-widget__title"><?php echo $settings['label_heading']?></p>
-                <div class="skew-icon-widget__content">
-                    <?php echo $settings['content'] ?>
+                        class="description-item__icon">
+                    <p class="description-item__title"><?php echo $settings['label_heading']?></p>
+                    <div class="description-item__content">
+                        <?php echo $settings['content'] ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -103,14 +107,17 @@ class SkewIconWidget extends Widget_Base{
 
     protected function _content_template(){
         ?>
-        <div class="skew-icon-widget skew-icon-widget--{{{ settings.border_style }}}">
-            <div class="skew-icon-widget__inner">
-                <div class="skew-icon-widget__header">
-                    <img src="{{{ settings.image.url }}}" class="skew-icon-widget__image">
-                </div>
-                <p class="skew-icon-widget__title">{{{ settings.label_heading }}}</p>
-                <div class="skew-icon-widget__content">
-                    {{{ settings.content }}}
+        <div class="description-item">
+            <div class="description-item__header">
+                <img src="{{{ settings.image.url }}}" class="description-item__image">
+            </div>
+            <div class="description-item__body">
+                <div class="description-item__inner">
+                    <img src="{{{ settings.icon.url }}}" class="description-item__image">
+                    <p class="description-item__title">{{{ settings.label_heading }}}</p>
+                    <div class="description-item__content">
+                        {{{ settings.content }}}
+                    </div>
                 </div>
             </div>
         </div>
