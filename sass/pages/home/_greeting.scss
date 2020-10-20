@@ -1,36 +1,4 @@
 .home-greeting.elementor-section {
-  .elementor-background-overlay {
-    height: 80%;
-    background: linear-gradient(-180deg, #000, transparent);
-  }
-  &:before {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: 30px;
-    background-color: #0073ae;
-    height: 25px;
-    width: 100%;
-    transform: rotate(2.9deg);
-    z-index: 1;
-    @include breakpoint(sm) {
-      bottom: 27px;
-    }
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: 4px;
-    background-color: #ceddff;
-    height: 25px;
-    width: 85%;
-    transform: rotate(2.9deg);
-    z-index: 1;
-    @include breakpoint(sm) {
-      bottom: -4px;
-    }
-  }
   @include breakpoint(sm) {
     min-height: 600px;
   }
