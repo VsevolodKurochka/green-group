@@ -41,15 +41,6 @@ class TestimonialSlider extends Widget_Base {
         );
 
         $repeater->add_control(
-            'list_location', [
-                'label' => __( 'Location', 'plugin-domain' ),
-                'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => __( '' , 'plugin-domain' ),
-                'label_block' => true,
-            ]
-        );
-
-        $repeater->add_control(
             'list_content', [
                 'label' => __( 'Content', 'plugin-domain' ),
                 'type' => \Elementor\Controls_Manager::WYSIWYG,
@@ -88,9 +79,6 @@ class TestimonialSlider extends Widget_Base {
                         <div class="testimonials-slider__item-name">
                             <?php echo $item['list_name']; ?>
                         </div>
-                        <div class="testimonials-slider__item-location">
-                            <?php echo $item['list_location']; ?>
-                        </div>
                         <div class="testimonials-slider__item-rating">
                             <i aria-hidden="true" class="fas fa-star"></i>
                             <i aria-hidden="true" class="fas fa-star"></i>
@@ -111,7 +99,6 @@ class TestimonialSlider extends Widget_Base {
         <dl>
             <# _.each( settings.list, function( item ) { #>
             <dt class="elementor-repeater-item-{{ item._id }}">{{{ item.list_name }}}</dt>
-            <dd>{{{ item.list_location }}}</dd>
             <dd>{{{ item.list_content }}}</dd>
             <# }); #>
         </dl>

@@ -33,9 +33,9 @@
                         <?php the_custom_logo(); ?>
                     </div>
                     <div class="nav__content">
-                        <a href="tel: (805) 870-5918" class="nav__phone">
+                        <a href="tel: (818) 722-6267" class="nav__phone">
                             <i aria-hidden="true" class="fas fa-phone-volume"></i>
-                            <span>(805) 870-5918</span>
+                            <span>(818) 722-6267</span>
                         </a>
                         <nav class="nav__menu" id="js-navigation-menu">
                             <?php

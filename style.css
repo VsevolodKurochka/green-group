@@ -3,7 +3,7 @@ Theme Name: greengroup
 Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
-Description: Custom theme for Green Group
+Description: Custom theme for Greengroup
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -344,7 +344,7 @@ textarea {
 	color: #404040;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
-	line-height: 1.5;
+	line-height: 1.3;
 }
 
 h1,
@@ -960,93 +960,59 @@ textarea {
 	}
 }
 
-.skew-icon-widget {
+.description-item {
 	position: relative;
 	text-align: center;
-	color: #fff;
 }
 
-.skew-icon-widget:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 80%;
-	background-color: #0073ae;
-	transform: skew(0deg, 2deg);
-}
-
-.skew-icon-widget--border {
-	color: #000;
-}
-
-.skew-icon-widget--border:before {
-	border-width: 1px;
-	border-color: #0073ae;
-	border-style: solid;
-	background-color: #e7eeff;
-}
-
-.skew-icon-widget__image {
-	width: 65px;
-}
-
-.skew-icon-widget__inner {
-	position: relative;
-	z-index: 1;
-	padding: 30px 15px;
-}
-
-.skew-icon-widget__header {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 110px;
-	height: 110px;
-	border-width: 1px;
-	border-color: #0073ae;
-	border-style: solid;
-	border-radius: 50%;
-	margin: 0 auto;
-	background-color: #fff;
-}
-
-.skew-icon-widget__title {
-	font-size: 25px;
-	text-transform: uppercase;
-	font-weight: 400;
+.description-item__title {
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 0;
 	margin-bottom: 15px;
-	margin-left: auto;
-	margin-right: auto;
 }
 
-.skew-icon-widget__content {
+.description-item__header {
+	font-size: 0;
+}
+
+.description-item__header img {
+	height: 220px;
+}
+
+.description-item__content {
 	max-width: 250px;
 	margin: 0 auto;
 }
 
+.description-item__body {
+	position: relative;
+	margin-top: -30px;
+	padding-left: 15px;
+	padding-right: 15px;
+	z-index: 1;
+}
+
+.description-item__inner {
+	padding: 15px;
+	border-width: 0.2px;
+	border-color: #afafaf;
+	border-style: solid;
+	background-color: rgba(255, 255, 255, 0.969);
+	box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.09);
+}
+
+.description-item__inner img.description-item__icon {
+	height: 65px;
+	margin-bottom: 15px;
+}
+
 @media screen and (min-width: 768px) {
-	.skew-icon-widget__inner:before {
-		transform: skew(2deg, 2deg);
+	.description-item__title {
+		font-size: 25px;
 	}
-	.skew-icon-widget__content {
+	.description-item__content {
 		min-height: 200px;
-	}
-	.skew-icon-widget__image {
-		width: 96px;
-	}
-	.skew-icon-widget__header {
-		width: 190px;
-		height: 190px;
-		margin-bottom: 75px;
-	}
-	.skew-icon-widget__title {
-		font-size: 30px;
-		max-width: 85%;
-	}
-	.skew-icon-widget__inner {
-		padding-bottom: 50px;
 	}
 }
 
@@ -1058,7 +1024,7 @@ textarea {
 	content: '';
 	position: absolute;
 	left: 50%;
-	bottom: -5px;
+	bottom: -15px;
 	width: 150px;
 	height: 1px;
 	transform: translateX(-50%);
@@ -1069,47 +1035,6 @@ textarea {
 	left: 0;
 	transform: none;
 	background-color: #fff;
-}
-
-.home-greeting.elementor-section .elementor-background-overlay {
-	height: 80%;
-	background: linear-gradient(-180deg, #000, transparent);
-}
-
-.home-greeting.elementor-section:before {
-	content: '';
-	position: absolute;
-	right: 0;
-	bottom: 30px;
-	background-color: #0073ae;
-	height: 25px;
-	width: 100%;
-	transform: rotate(2.9deg);
-	z-index: 1;
-}
-
-@media screen and (min-width: 768px) {
-	.home-greeting.elementor-section:before {
-		bottom: 27px;
-	}
-}
-
-.home-greeting.elementor-section:after {
-	content: '';
-	position: absolute;
-	right: 0;
-	bottom: 4px;
-	background-color: #ceddff;
-	height: 25px;
-	width: 85%;
-	transform: rotate(2.9deg);
-	z-index: 1;
-}
-
-@media screen and (min-width: 768px) {
-	.home-greeting.elementor-section:after {
-		bottom: -4px;
-	}
 }
 
 @media screen and (min-width: 768px) {
@@ -1350,10 +1275,6 @@ textarea {
 
 .contact-us__phone a:hover {
 	opacity: 0.8;
-}
-
-.home-who-we-are path {
-	fill: #0073ae;
 }
 
 .home-copyright a {
