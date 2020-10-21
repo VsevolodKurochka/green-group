@@ -23,9 +23,16 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 @import "components/slider";
 @import "components/border-item";
 @import "components/gallery-box";
+@import "components/price-table";
+@import "components/image-slider";
+@import "components/form";
+
+
 
 @import "pages/home/greeting";
+@import "pages/home/needs";
 @import "pages/home/contact-us";
 @import "pages/home/copyright";
+
 
 @import "slick";
