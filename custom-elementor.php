@@ -18,6 +18,8 @@ class Widget_Loader{
     private function include_widgets_files(){
         require_once(__DIR__ . '/widgets/description-item-widget.php');
         require_once(__DIR__ . '/widgets/testimonial-slider.php');
+        require_once(__DIR__ . '/widgets/image-slider.php');
+        require_once(__DIR__ . '/widgets/price-table.php');
     }
 
     public function register_widgets(){
@@ -26,6 +28,8 @@ class Widget_Loader{
 
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\DescriptionItemWidget());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\TestimonialSlider());
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ImageSlider());
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PriceTable());
     }
 
     public function __construct(){
