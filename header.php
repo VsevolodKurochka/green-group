@@ -30,13 +30,15 @@
                         <button class="hamburger hamburger_effect-2" type="button" id="js-nav-hamburger">
                             <span class="hamburger__lines"><span></span><span></span><span></span><span></span></span>
                         </button>
-                        <?php the_custom_logo(); ?>
+                        <?php echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'full' ); ?>
                     </div>
                     <div class="nav__content">
-                        <a href="tel: (818) 722-6267" class="nav__phone">
-                            <i aria-hidden="true" class="fas fa-phone-volume"></i>
-                            <span>(818) 722-6267</span>
-                        </a>
+                        <?php if( $phone = get_theme_mod('header_phone') ){ ?>
+                            <a href="tel: <?php echo $phone; ?>" class="nav__phone">
+                                <i aria-hidden="true" class="fas fa-phone-volume"></i>
+                                <span><?php echo $phone; ?></span>
+                            </a>
+                        <?php } ?>
                         <nav class="nav__menu" id="js-navigation-menu">
                             <?php
                             wp_nav_menu(
