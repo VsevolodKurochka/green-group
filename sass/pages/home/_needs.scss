@@ -1,0 +1,14 @@
+.air-ducts-need-icons {
+  .elementor-widget-image-box {
+    border-bottom: 1px solid #39b54a;
+    padding-bottom: 10px;
+  }
+  @include breakpoint(sm) {
+    .elementor-widget-wrap {
+      justify-content: space-between;
+    }
+    .elementor-widget-image-box {
+      flex-basis: 48%;
+    }
+  }
+}

@@ -2,7 +2,7 @@
   &__location,
   &__phone {
     position: relative;
-    padding-left: 50px;
+    padding-left: 25px;
     &:before {
       content: '';
       position: absolute;
@@ -14,8 +14,8 @@
     &:before {
       background: url('./img/location.svg') 0 0 no-repeat;
       background-size: cover;
-      width: 32px;
-      height: 48px;
+      width: 15px;
+      height: 22px;
     }
 
     strong {
@@ -29,8 +29,9 @@
     &:before {
       background: url('./img/phone.svg') 0 0 no-repeat;
       background-size: cover;
-      width: 38px;
-      height: 38px;
+      width: 15px;
+      height: 15px;
+      top: 4px;
     }
     p {
       margin: 0;
