@@ -1,0 +1,40 @@
+.image-slider {
+  * {
+    outline: none !important;
+  }
+  &__item img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .slick-dots {
+    padding-left: 0;
+    list-style: none;
+    margin: 30px 0 0 0;
+    text-align: center;
+    li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    li button {
+      display: inline-block;
+      transition: all ease 0.3s;
+      width: 10px;
+      height: 10px;
+      background-color: #cccccc;
+      border-radius: 100%;
+      font-size: 0;
+      line-height: 1;
+      cursor: pointer;
+    }
+    li button:hover,
+    li.slick-active button {
+      background-color: #39b54a;
+    }
+  }
+
+  @include breakpoint(sm) {
+    &__item img {
+      max-height: 450px;
+    }
+  }
+}
