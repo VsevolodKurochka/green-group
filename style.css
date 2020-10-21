@@ -1037,107 +1037,9 @@ textarea {
 	background-color: #fff;
 }
 
-@media screen and (min-width: 768px) {
-	.home-greeting.elementor-section {
-		min-height: 600px;
-	}
-}
-
-.home-services .elementor-widget-heading .elementor-size-medium:before {
-	background-color: #fff;
-}
-
-.home-services__grid .elementor-icon-box-title {
-	margin-bottom: 10px;
-}
-
-.home-services__grid .elementor-widget-icon-box {
-	border-bottom: 1px solid #fff;
-	padding-bottom: 30px;
-}
-
-@media screen and (min-width: 768px) {
-	.home-services__grid .elementor-icon-box-title {
-		max-width: 80%;
-		margin-left: auto;
-		margin-right: auto;
-		min-height: 75px;
-	}
-	.home-services__grid .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated {
-		padding: 0;
-	}
-	.home-services__grid .elementor-widget-icon-box {
-		margin-bottom: 0 !important;
-		min-height: 425px;
-		border-right: 1px solid #fff;
-		padding: 30px;
-		border-bottom: none;
-	}
-	.home-services__grid .elementor-widget-icon-box:first-child {
-		border-bottom: 1px solid #fff;
-	}
-	.home-services__grid .elementor-column:last-child .elementor-widget-icon-box {
-		border-right: none;
-	}
-}
-
-.home-insurances .gallery-item img {
-	max-width: 100%;
-}
-
-.home-insurances .gallery {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.home-insurances .elementor-image-gallery .gallery-item {
-	min-height: 70px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-basis: 33%;
-	padding: 10px;
-	border-right: 1px solid rgba(0, 115, 174, 0.3);
-	border-bottom: 1px solid rgba(0, 115, 174, 0.3);
-}
-
-.home-insurances .elementor-image-gallery .gallery-item:nth-child(3n) {
-	border-right: none;
-}
-
-.home-insurances .elementor-image-gallery .gallery-item:last-child {
-	border-bottom: none;
-	border-left: 1px solid rgba(0, 115, 174, 0.3);
-}
-
-@media screen and (min-width: 768px) {
-	.home-insurances .gallery-item img {
-		max-width: 150px;
-	}
-	.home-insurances .elementor-image-gallery .gallery-item {
-		min-height: 150px;
-		border-bottom: none;
-	}
-	.home-insurances .elementor-image-gallery .gallery-item:nth-child(n+5) {
-		border-top: 1px solid rgba(0, 115, 174, 0.3);
-	}
-	.home-insurances .elementor-image-gallery .gallery-item:not(:last-child) {
-		border-right: 1px solid rgba(0, 115, 174, 0.3);
-	}
-	.home-insurances .elementor-image-gallery .gallery-item:nth-child(5) {
-		border-right: none;
-		border-top: none;
-	}
-	.home-insurances .elementor-image-gallery .gallery-item:last-child {
-		border-left: none;
-		border-right: none;
-	}
-}
-
 .testimonials-slider {
 	position: relative;
-	padding-bottom: 90px;
+	padding-bottom: 60px;
 }
 
 .testimonials-slider__item {
@@ -1145,7 +1047,6 @@ textarea {
 	border-width: 0.3px;
 	border-color: #b1aeae;
 	border-style: solid;
-	border-radius: 15px;
 	background-color: white;
 	box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.07);
 	margin: 30px 15px;
@@ -1155,11 +1056,8 @@ textarea {
 }
 
 .testimonials-slider__item-quote {
-	position: absolute;
-	left: 50px;
-	top: -25px;
 	font-size: 50px;
-	color: #0073ae;
+	color: #39b54a;
 }
 
 .testimonials-slider__item-content {
@@ -1170,7 +1068,7 @@ textarea {
 
 .testimonials-slider__item-name {
 	font-weight: bold;
-	color: #0073ae;
+	color: #39b54a;
 	text-transform: uppercase;
 	line-height: 1.2;
 }
@@ -1182,7 +1080,7 @@ textarea {
 
 .testimonials-slider__item-rating {
 	margin-top: 15px;
-	color: #0073ae;
+	color: #39b54a;
 }
 
 .testimonials-slider .slick-arrow {
@@ -1226,6 +1124,39 @@ textarea {
 	.testimonials-slider__item {
 		padding: 45px 30px;
 		font-size: 20px;
+	}
+}
+
+.border-item .elementor-widget-wrap {
+	padding: 30px 15px;
+	border-width: 0.2px;
+	border-color: #afafaf;
+	border-style: solid;
+	background-color: rgba(255, 255, 255, 0.42);
+	box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-box .gallery-item {
+	position: relative;
+}
+
+.gallery-box .gallery-caption {
+	position: relative;
+	padding: 10px;
+	text-align: center;
+	border-width: 0.2px;
+	border-color: #afafaf;
+	border-style: solid;
+	background-color: #fff;
+	box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.05);
+	max-width: 95%;
+	margin: -20px auto 0 !important;
+	z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+	.home-greeting.elementor-section {
+		min-height: 600px;
 	}
 }
 
@@ -1285,32 +1216,6 @@ textarea {
 
 .home-copyright a:hover {
 	opacity: 0.8;
-}
-
-.section-border-top {
-	position: relative;
-}
-
-.section-border-top:before {
-	content: '';
-	position: absolute;
-	right: 0;
-	top: 5px;
-	background-color: #ceddff;
-	height: 15px;
-	width: 85%;
-	transform: rotate(2.9deg);
-	z-index: 1;
-}
-
-.section-border-top--dark:before {
-	background-color: #0073ae;
-}
-
-@media screen and (min-width: 768px) {
-	.section-border-top:before {
-		top: 32px;
-	}
 }
 
 /* Slider */
