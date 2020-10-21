@@ -130,6 +130,7 @@ function greengroup_scripts() {
     wp_enqueue_script( 'greengroup-jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'greengroup-slick', get_template_directory_uri() . '/js/slick.min.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'greengroup-jquery-main', get_template_directory_uri() . '/js/jquery.main.js', array(), _S_VERSION, true );
+    wp_enqueue_script( 'greengroup-form', get_template_directory_uri() . '/js/contact.form.js', array(), _S_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'greengroup_scripts' );
 
@@ -147,5 +148,15 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * Customizer
+ */
+require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Zapier
+ */
+require get_template_directory() . '/inc/zapier.php';
 
 show_admin_bar(false);
