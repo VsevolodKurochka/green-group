@@ -1,0 +1,18 @@
+.gallery-box {
+  .gallery-item {
+    position: relative;
+  }
+  .gallery-caption {
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    border-width: 0.2px;
+    border-color: rgb(175, 175, 175);
+    border-style: solid;
+    background-color: #fff;
+    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.05);
+    max-width: 95%;
+    margin: -20px auto 0 !important;
+    z-index: 1;
+  }
+}
